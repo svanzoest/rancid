@@ -1,0 +1,18 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+  require_chef_omnibus: true
+
+platforms:
+  - name: ubuntu-14.04
+  - name: centos-6.6
+  - name: centos-7.0
+
+suites:
+  - name: default
+    run_list:
+      - recipe[rancid::default]
+    attributes:
