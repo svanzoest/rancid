@@ -28,7 +28,7 @@ when 'debian', 'ubuntu'
   default['rancid']['bindir']               = '/usr/bin'
   default['rancid']['etcdir']               = '/etc/rancid'
   default['rancid']['vardir']               = '/var/rancid'
-  default['rancid']['conf']['tmpdir']       = '/tmp'
+  default['rancid']['conf']['tmpdir']   = '/tmp'
   default['rancid']['lg']['cache_dir']  = './tmp'
   default['rancid']['lg']['log']        = './tmp/lg.log'
   default['rancid']['lg']['routerdb']   = '/etc/rancid/router.db'
@@ -56,10 +56,10 @@ end
 # (file where you can specify the mail from address, search for sendmail eg sendmail -fsupport@test.com -FRancid -t)
 # default['rancid']['control_rancid'] = /usr/local/rancid/bin/control_rancid
 # default['rancid']['routerdb']
-default['rancid']['config_mode']  = 0600
+default['rancid']['config_mode'] = 0600
 
 # rancid configuration attributes
-default['rancid']['umask']           = '027'
+default['rancid']['umask'] = '027'
 default['rancid']['conf']['list_of_groups']  = ''
 # options: NO | YES | ALL
 default['rancid']['conf']['filter_pwds']     = 'YES'
