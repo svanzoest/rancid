@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 name 'rancid'
 maintainer  'Sander van Zoest'
 maintainer_email 'cookbooks@vanzoest.com'

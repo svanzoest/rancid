@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 #
 # Cookbook Name:: rancid
 # Attributes:: default
@@ -16,7 +18,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
 case node['platform']
 when 'debian', 'ubuntu'
   default['rancid']['user']                 = 'root'
@@ -28,10 +29,6 @@ when 'debian', 'ubuntu'
   default['rancid']['bindir']               = '/usr/bin'
   default['rancid']['etcdir']               = '/etc/rancid'
   default['rancid']['vardir']               = '/var/rancid'
-  default['rancid']['conf']['tmpdir']   = '/tmp'
-  default['rancid']['lg']['cache_dir']  = './tmp'
-  default['rancid']['lg']['log']        = './tmp/lg.log'
-  default['rancid']['lg']['routerdb']   = '/etc/rancid/router.db'
 else
   default['rancid']['user']                 = 'rancid'
   default['rancid']['group']                = 'rancid'
@@ -42,12 +39,12 @@ else
   default['rancid']['conf']['bindir']       = '/usr/local/rancid/bin'
   default['rancid']['etcdir']               = '/usr/local/rancid/etc'
   default['rancid']['vardir']               = '/usr/local/rancid/var'
-  default['rancid']['conf']['tmpdir']       = '/tmp'
-  default['rancid']['lg']['cache_dir']      = './tmp'
-  default['rancid']['lg']['log']            = './tmp/lg.log'
-  default['rancid']['lg']['routerdb']       = '/etc/rancid/router.db'
 end
 
+default['rancid']['conf']['tmpdir']   = '/tmp'
+default['rancid']['lg']['cache_dir']  = './tmp'
+default['rancid']['lg']['log']        = './tmp/lg.log'
+default['rancid']['lg']['routerdb'] = '/etc/rancid/router.db'
 # Important files
 # default['rancid']['cloginrc'] = /usr/local/rancid/.cloginrc
 # /usr/local/rancid/etc/rancid.conf
@@ -56,7 +53,7 @@ end
 # (file where you can specify the mail from address, search for sendmail eg sendmail -fsupport@test.com -FRancid -t)
 # default['rancid']['control_rancid'] = /usr/local/rancid/bin/control_rancid
 # default['rancid']['routerdb']
-default['rancid']['config_mode'] = 0600
+default['rancid']['config_mode'] = 0o600
 
 # rancid configuration attributes
 default['rancid']['umask'] = '027'
