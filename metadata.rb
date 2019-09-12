@@ -9,7 +9,7 @@ long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 source_url       'https://github.com/svanzoest/rancid'
 issues_url       'https://github.com/svanzoest/rancid/issues'
 version '0.1.0'
-chef_version     '>= 13.9'
+chef_version '>= 13.9'
 supports 'ubuntu', '>= 14.04'
 supports 'debian', '>= 7.0'
 supports 'centos', '>= 6.6'
