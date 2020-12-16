@@ -182,7 +182,7 @@ GEM
     ipaddress (0.8.3)
     jaro_winkler (1.5.3)
     jmespath (1.4.0)
-    json (2.2.0)
+    json (2.3.1)
     kartograph (0.2.7)
     kitchen-digitalocean (0.10.4)
       droplet_kit (~> 2.8)
